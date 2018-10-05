@@ -1,33 +1,61 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../redux/actions';
 
 class AddForm extends Component {
   // state for handling the form data as 'controlled data'
   state = {
-    todo: ''
+    todoDescription: ''
   };
+
+  // initial focus for input. Wait for the component to mount and then
+  // creates enable autofocus to input
+  componentDidMount(){
+    document.getElementById('todo-description').autofocus = true;
+  }
 
   // not need to bind thanks to 'babel-plugin-transform-class-properties'
   onChangeTodo = e => {
     const value = e.target.value;
-    this.setState({ todo: value });
+    this.setState({ todoDescription: value });
+  }
+
+  onAddTodo = e => {
+    e.preventDefault();
+    const description = this.state.todoDescription.trim();
+
+    // if description not empty, create the todo with status 'started'
+    if( description.length > 0 ){
+      const status = 'started';
+
+      this.props.addTodo({
+        description,
+        status
+      });
+
+      this.setState({ todoDescription: '' });
+      document.getElementById('todo-description').focus();
+    }
   }
 
   render(){
     return (
       <div className="add-form">
-        <form>
+        <form onSubmit={this.onAddTodo}>
           <input
+            id="todo-description"
             type="text"
-            value={ this.state.todo }
+            value={ this.state.todoDescription }
             onChange={ this.onChangeTodo }
+            placeholder="Add Todo"
           />
 
-          <button type="button">Add</button>
+          <button type="button" onClick={this.onAddTodo}>Add</button>
         </form>
       </div>
     );
   }
 }
 
-export default AddForm;
+// passing object of functions to connect works like mapDispatchToProps
+export default connect(null, actions)(AddForm);

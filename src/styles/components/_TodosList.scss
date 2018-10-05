@@ -1,0 +1,26 @@
+.todos-list {
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+
+  ul {
+    list-style-type: none;
+    height: 30rem;
+    overflow-y: auto;
+    background-color: $white;
+    padding: 0 1rem;
+
+    li {
+      padding: 1rem 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba($teal, .2);
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: $md-size;
+    }
+  }
+
+}

@@ -1,0 +1,40 @@
+.add-form {
+  margin-top: 30px;
+
+  form{
+    @include flex-sb-c;
+
+    input,
+    button {
+      @include default-radius;
+      display: block;
+      border: 1px solid rgba($teal, .5);
+      height: 45px;
+      box-sizing: border-box;
+      font-family: 'Lato', sans-serif;
+      font-size: $md-size;
+    }
+
+    input {
+      padding: 0 10px;
+      flex-basis: calc( 100% - 100px );
+      border-right: none;
+      outline: none;
+    }
+
+    button {
+      flex-basis: 100px;
+      border-left: none;
+      background-color: rgba($teal, .8);
+      color: $white;
+      font-weight: 300;
+      transition: all .3s ease;
+
+      &:hover {
+        background-color: rgba($teal, 1);
+        cursor: pointer;
+      }
+    }
+  }
+
+}

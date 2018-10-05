@@ -12,8 +12,12 @@ class TodosList extends Component {
       <div className="todos-list">
         <ul>
           { this.props.todos.map( t => (
-            <li key={t.id}>
-              <Todo todoDescription={t.description} />
+            <li key={t.id} className={`${t.completed ? 'completed' : ''}`}>
+              <Todo
+                id={t.id}
+                todoDescription={t.description}
+                completed={t.completed}
+              />
             </li>
           )) }
         </ul>

@@ -20,6 +20,7 @@
       flex-basis: calc( 100% - 100px );
       border-right: none;
       outline: none;
+      font-weight: 300;
     }
 
     button {
@@ -34,6 +35,19 @@
         background-color: rgba($teal, 1);
         cursor: pointer;
       }
+    }
+
+    input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-weight: 300;
+    }
+    input::-moz-placeholder { /* Firefox 19+ */
+      font-weight: 300;
+    }
+    input:-ms-input-placeholder { /* IE 10+ */
+      font-weight: 300;
+    }
+    input:-moz-placeholder { /* Firefox 18- */
+      font-weight: 300;
     }
   }
 

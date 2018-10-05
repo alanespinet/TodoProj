@@ -1,0 +1,11 @@
+footer {
+  height: 40px;
+  @include flex-c-c;
+  background-color: $teal;
+
+  p {
+    color: $light-gray;
+    font-weight: 300;
+    font-size: $sm-size;
+  }
+}

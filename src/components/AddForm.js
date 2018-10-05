@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import uuid from 'uuid';
 import * as actions from '../redux/actions';
 
 class AddForm extends Component {
@@ -29,8 +30,9 @@ class AddForm extends Component {
       const status = 'started';
 
       this.props.addTodo({
+        id: uuid(),
         description,
-        status
+        completed: false
       });
 
       this.setState({ todoDescription: '' });
@@ -57,5 +59,6 @@ class AddForm extends Component {
   }
 }
 
-// passing object of functions to connect works like mapDispatchToProps
+// passing object of functions to connect works like mapDispatchToProps.
+// functions pass to props as if they were dispatched
 export default connect(null, actions)(AddForm);

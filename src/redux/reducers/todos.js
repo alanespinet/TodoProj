@@ -1,12 +1,4 @@
-const defaultState = [{
-  id: '1',
-  description: 'Sacar a Yuki',
-  completed: true
-}, {
-  id: '2',
-  description: 'Sacar a Yuki de nuevo',
-  completed: false
-}];
+const defaultState = [];
 
 export default ( state = defaultState, action ) => {
   switch( action.type ){

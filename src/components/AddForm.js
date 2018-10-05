@@ -37,6 +37,8 @@ class AddForm extends Component {
 
       this.setState({ todoDescription: '' });
       document.getElementById('todo-description').focus();
+    } else {
+      alert('The Todo can\'t be empty');
     }
   }
 

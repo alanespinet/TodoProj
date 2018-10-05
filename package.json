@@ -29,6 +29,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "start": "yarn run dev-server"
   }
 }

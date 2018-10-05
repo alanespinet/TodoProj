@@ -3,6 +3,11 @@
 ## Overview
 This project handles a list of Todos (actions, tasks, etc) in a way the user can **add**, **complete** and **remove** elements from the list.
 
+## Setup
+In order to copy this project, please clone it with *git clone* or download it from GitHub.
+
+* To run the project, use: *yarn start* or *npm start*
+
 ## Initialization
 This project does **NOT** use *create-react-app*. A custom **Webpack** configuration has been done.
 
@@ -22,3 +27,8 @@ The styles have been created using SCSS, and divided into four categories:
 * components - Components Styles
 * mixins - Reusable CSS like *layouts* or *responsive medias*
 * animations - To handle animations styles
+
+## Deployment
+A copy of this project has been configured for deployment and deployed to Heroku. The URL is *https://mytodolistproject.herokuapp.com/* (it uses the free hosting plan, so it can take a couple of seconds to load). The configuration used (that includes a bit of *Express*) can be found on the next URL: *https://github.com/alanespinet/TodoDep*.
+
+## Thank you very much.

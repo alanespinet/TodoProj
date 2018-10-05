@@ -7,13 +7,13 @@ This project handles a list of Todos (actions, tasks, etc) in a way the user can
 The information for this project has been handled only *locally*. Not database or file storage has been used. All the state is managed through *Redux*. In this particular, the application has:
 
 * One reducer to handle the *Todos*
-* Actions to handle *add todo*, *change completed of a give todo* and *remove a todo*
+* Actions to handle *add Todo*, *change completed of a given Todo* and *remove a Todo*
 
 ## Animations
 The list has been animated using **ReactCSSTransitionGroup**
 
 ## Styles
-The styles have been created using SCSS, and divided into some categories:
+The styles have been created using SCSS, and divided into four categories:
 
 * base - Top level and configuration styles.
 * components - Components Styles

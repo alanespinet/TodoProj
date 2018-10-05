@@ -1,0 +1,9 @@
+header {
+  height: 200px;
+  background-color: $teal;
+  @include flex-c-c;
+
+  h1 {
+    color: $light-gray;
+  }
+}

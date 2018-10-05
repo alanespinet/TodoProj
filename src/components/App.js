@@ -11,7 +11,7 @@ export default class App extends React.Component {
     return(
       <div>
         <Header />
-        <div className="container">
+        <div className="container app-wrapper">
           <Counter />
           <AddForm />
           <TodosList />

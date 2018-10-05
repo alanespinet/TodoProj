@@ -3,9 +3,14 @@ footer {
   @include flex-c-c;
   background-color: $teal;
 
+  @include responsive-phone {
+    height: 60px;
+  }
+
   p {
     color: $light-gray;
     font-weight: 300;
     font-size: $sm-size;
+    text-align: center;
   }
 }

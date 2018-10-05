@@ -4,4 +4,10 @@
   strong {
     color: $blue;
   }
+
+  p {
+    @include responsive-phone {
+      font-size: $md-size;
+    }
+  }
 }

@@ -26,6 +26,10 @@
           color: $teal;
           font-weight: 300;
           margin-left: 20px;
+
+          @include responsive-phone {
+            display: none;
+          }
         }
       }
 

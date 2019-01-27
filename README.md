@@ -9,7 +9,7 @@ In order to copy this project, please clone it with *git clone* or download it f
 * To run the project, use: *yarn start* or *npm start*
 
 ## Initialization
-This project does **NOT** use *create-react-app*. A custom **Webpack** configuration has been done. This copy of the project is for Dev environment only. For Prod environment, see 'Deployment'.
+This project does **NOT** use *create-react-app*. A custom **Webpack** configuration has been done. This copy of the project is for Dev environment only. For Prod environment, see **Deployment**.
 
 ## Storage
 The information for this project has been handled only *locally*. Not database or file storage has been used. All the state is managed through *Redux*. In this particular, the application has:
